@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'ProtestRiot';
+    src: url(./fonts/ProtestRiot-Regular.ttf) format('opentype');
+}
+
+:root {
+    --navtext-clr: #DA4438;
+    --navborder-clr: #da43389a;
+    --nametext-clr: #DA4438;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+header p {
+    font-family: 'ProtestRiot';
+    font-size: 40px;
+    color: var(--nametext-clr);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    align-items: center;
+    border: 1px solid var(--navborder-clr);
+    border-radius: 40px;
+}
+
+nav button {
+    color: var(--navtext-clr);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
