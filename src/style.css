@@ -1,25 +1,25 @@
 
-
 :root {
+    --navtext-clr: #DA4438;
+    --navborder-clr: #da43389a;
+    --nametext-clr: #DA4438;
     --bgr-clr: #f7f6f1;
 }
+
 
 *, *::before, *::after {
     box-sizing: border-box;
     
 }
 
-/*reset style*/
-button {
-    border: none;
-    outline: none;
-    background: none;
-}
-
 body {
     display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
     justify-content: center;
     background-color: var(--bgr-clr);
+    padding: 20px;
 }
 
 

@@ -1,0 +1,22 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.heroTitle {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: bold;
+    width: 20ch;
+    color: var(--nametext-clr)
+}
+
+.heroText {
+    font-size: 24px;
+    font-family: 'Lato';
+    width: 50ch;
+}
