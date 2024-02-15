@@ -1,4 +1,5 @@
 import './home.css'
+import sushiImage from '../images/Sushi_home.png'
 
 const heroSubtext = document.createElement('p');
 
@@ -7,6 +8,14 @@ const makeHeroTitle = (text = "Your favourite meal just a click away!") => {
     heroTitle.textContent = text;
     heroTitle.classList.add('heroTitle');
     return heroTitle;
+}
+
+const makeImage = (src = sushiImage) => {
+    const heroImage = new Image();
+    heroImage.src = src;
+    heroImage.alt = "A sushi plate."
+    heroImage.classList.add("heroImage")
+    return heroImage;
 }
 
 const makeHeroText = (text = `Savor culinary excellence at our restaurant, where every dish is a masterpiece and every bite a journey of flavor. Experience the perfect blend of ambiance, taste, and hospitality in every visit.`) => {
@@ -20,9 +29,11 @@ const makeHome = () => {
     const container = document.createElement('div');
     const heroText = makeHeroText();
     const heroTitle = makeHeroTitle();
+    const heroImage = makeImage();
 
     container.classList.add('homeContainer')
     container.appendChild(heroTitle);
+    container.appendChild(heroImage);
     container.appendChild(heroText);
     
     return container;

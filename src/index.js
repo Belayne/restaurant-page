@@ -4,5 +4,13 @@ import './header.css'
 import '../fonts/fonts.css'
 import makeHome from './home';
 
-const contentDiv = document.querySelector('#content');
-contentDiv.appendChild(makeHome());
+function appendHome() {
+    const contentDiv = document.querySelector('#content');
+    document.querySelector("#homeBtn").classList.add('selected')
+    contentDiv.appendChild(makeHome());
+}
+
+appendHome();
+
+
+

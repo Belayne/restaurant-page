@@ -3,7 +3,7 @@
     --navtext-clr: #DA4438;
     --navborder-clr: #da43389a;
     --nametext-clr: #DA4438;
-    --bgr-clr: #f7f6f1;
+    --bgr-clr: #fffade;
 }
 
 
@@ -20,6 +20,11 @@ body {
     justify-content: center;
     background-color: var(--bgr-clr);
     padding: 20px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
 }
 
 

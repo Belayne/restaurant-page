@@ -34,3 +34,7 @@ nav button:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.selected {
+    text-decoration: underline;
+}
