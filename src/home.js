@@ -1,8 +1,6 @@
 import './home.css'
 import sushiImage from '../images/Sushi_home.png'
 
-const heroSubtext = document.createElement('p');
-
 const makeHeroTitle = (text = "Your favourite meal just a click away!") => {
     const heroTitle = document.createElement('h2');
     heroTitle.textContent = text;
