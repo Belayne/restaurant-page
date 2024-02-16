@@ -23,16 +23,25 @@ const makeHeroText = (text = `Savor culinary excellence at our restaurant, where
     return heroText;
 }
 
+const makeOrderBtn = (text = "Order now!") => {
+    const orderBtn = document.createElement('button');
+    orderBtn.textContent = text;
+    orderBtn.classList.add('orderBtn');
+    return orderBtn;
+}
+
 const makeHome = () => {
     const container = document.createElement('div');
     const heroText = makeHeroText();
     const heroTitle = makeHeroTitle();
     const heroImage = makeImage();
+    const orderBtn = makeOrderBtn();
 
     container.classList.add('homeContainer')
     container.appendChild(heroTitle);
     container.appendChild(heroImage);
     container.appendChild(heroText);
+    container.append(orderBtn);
     
     return container;
 }
