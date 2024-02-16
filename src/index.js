@@ -1,42 +1,58 @@
-import './reset.css'
-import './style.css';
-import './header.css'
+import '../styles/reset.css'
+import '../styles/style.css';
+import '../styles/header.css'
 import '../fonts/fonts.css'
 import makeHome from './home';
+import makeMenu from './menu';
 
 function addListeners() {
     const navButtons = document.querySelectorAll('nav button');
     navButtons.forEach(button => button.addEventListener("click", loadContent))
 }
 
-function loadHome() {
-    const contentDiv = document.querySelector('#content');
-    document.querySelector("#homeBtn").classList.add('selected')
-    contentDiv.appendChild(makeHome());
-}
-
-function loadContent() {
-    if(this.classList.contains('selected')) return;
-    else  {
-        document.querySelector('.selected').classList.toggle('selected');
-        this.classList.toggle('selected')
-        clearContent();
-
-        switch(this.id){
-            case 'homeBtn': loadHome();
-        }
-    }
-}
-
 function clearContent() {
     const toRemove = document.querySelector('#content').firstChild;
     if(toRemove){
-        document.querySelector('#content').removeChild(toRemove)
+        toRemove.parentNode.removeChild(toRemove)
     }
 }
 
+
+function loadContent() {
+    const contentDiv = document.querySelector('#content');
+    if(this){
+        if(!this.classList.contains('selected'))
+        {
+            clearContent();
+            document.querySelector('.selected').classList.toggle('selected');
+            this.classList.toggle('selected')
+            
+
+            switch(this.id){
+                case 'homeBtn': {
+                    contentDiv.appendChild(makeHome());
+                    break;
+                }
+                case 'menuBtn':{
+                    contentDiv.appendChild(makeMenu());
+                    break;
+                }
+            }
+        }
+    }
+    else {
+        contentDiv.appendChild(makeHome());
+        document.querySelector('#homeBtn').classList.add('selected') 
+    }
+}
+    
+
+
 addListeners();
-loadHome();
+
+
+
+loadContent();
 
 
 

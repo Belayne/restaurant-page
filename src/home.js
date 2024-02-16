@@ -1,4 +1,4 @@
-import './home.css'
+import '../styles/home.css'
 import sushiImage from '../images/Sushi_home.png'
 
 const makeHeroTitle = (text = "Your favourite meal just a click away!") => {
