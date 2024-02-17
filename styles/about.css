@@ -1,0 +1,25 @@
+.aboutTitle {
+    font-family: 'ProtestRiot';
+    color: var(--nametext-clr);
+    font-size: max(24px, 2vw);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.aboutText {
+    font-family: 'Lato';
+}
+
+.aboutTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    width: 40ch;
+}

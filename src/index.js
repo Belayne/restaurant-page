@@ -4,6 +4,7 @@ import '../styles/header.css'
 import '../fonts/fonts.css'
 import makeHome from './home';
 import makeMenu from './menu';
+import makeAbout from './about';
 
 function addListeners() {
     const navButtons = document.querySelectorAll('nav button');
@@ -35,6 +36,10 @@ function loadContent() {
                 }
                 case 'menuBtn':{
                     contentDiv.appendChild(makeMenu());
+                    break;
+                }
+                case 'aboutBtn': {
+                    contentDiv.appendChild(makeAbout());
                     break;
                 }
             }
