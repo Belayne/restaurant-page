@@ -1,4 +1,6 @@
 import '../styles/menu.css'
+import nigiriImg from '../images/nigiri-image.png'
+import sashimiImg from '../images/sashimi-image.png'
 
 const Sashimi = {
     "Salmon": "€2/pz",
@@ -20,7 +22,7 @@ const Nigiri = {
 
 function makeMenuSection(name, prices) {
     const menuSection = document.createElement('div')
-    menuSection.classList.add('.menuSection');
+    menuSection.classList.add('menuSection');
     const title = document.createElement('h3');
     title.classList.add('menuTitle');
     title.textContent = name;
@@ -40,15 +42,26 @@ function makeMenuSection(name, prices) {
     return menuSection
 }
 
+function makeImage(src) {
+    const image = new Image();
+    image.src = src;
+    image.classList.add('menuImage');
+    return image;
+}
+
 function makeMenu() {
     const container = document.createElement('div');
     container.classList.add("menu");
 
     const nigiriMenu = makeMenuSection("Nigiri", Nigiri);
     const sashimiMenu = makeMenuSection("Sashihmi", Sashimi);
+    const nigiriImage = makeImage(nigiriImg);
+    const sashimiImage = makeImage(sashimiImg);
 
     container.appendChild(nigiriMenu);
+    container.appendChild(nigiriImage)
     container.appendChild(sashimiMenu);
+    container.appendChild(sashimiImage);
 
     return container;
 }

@@ -1,0 +1,44 @@
+.menu {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.menuSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2 / 3;
+    row-gap: 20px;
+}
+
+
+.menuTitle {
+    font-size: max(24px, 2vw);
+    font-family: 'ProtestRiot';
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
+.dishName {
+    grid-column: 1 / 2;
+    justify-self: left;
+}
+
+.dishPrice {
+    grid-column: 2 / 3;
+    justify-self: right;
+}
+
+.dishName, .dishPrice {
+    font-size: max(16px, 1vw);
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+.menuImage {
+    align-self: center;
+    justify-self: left;
+    max-width: 7vw;
+    grid-column: 3 / 4;
+}
